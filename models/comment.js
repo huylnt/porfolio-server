@@ -14,7 +14,11 @@ const comment = new Schema({
      createdAt: {
           type: Date,
           default: Date.now
+     },
+     ip_id: {
+          type: Schema.Types.ObjectId,
+          ref: 'userIPs'
      }
 })
 
-module.exports = mongoose.model('comment', comment)
+module.exports = mongoose.model('comments', comment)
