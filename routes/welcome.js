@@ -4,6 +4,10 @@ const router = express.Router()
 
 const User = require('../models/User')
 
+router.get('/', async (req,res) => {
+     res.status.json({msg: 'Welcome'})
+})
+
 router.post('/', async (req, res) => {
      console.log("Received POST request at /welcome")
      const { visitor } = req.body
