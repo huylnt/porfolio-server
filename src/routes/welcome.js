@@ -5,7 +5,7 @@ const router = express.Router()
 const User = require('../models/User')
 
 router.get('/', async (req,res) => {
-     res.status.json({msg: 'Welcome'})
+     res.status(200).json({msg: 'Welcome'})
 })
 
 router.post('/', async (req, res) => {
