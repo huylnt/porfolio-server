@@ -2,8 +2,8 @@ const express = require('express')
 
 const router = express.Router()
 
-const Comment = require('../models/Comment')
-const User = require('../models/User')
+const Comment = require('../models/Comment.js')
+const User = require('../models/User.js')
 
 router.get('/', async (req, res) => {
      console.log("Received GET request at /comment")
