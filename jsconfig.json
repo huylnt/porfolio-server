@@ -1,0 +1,12 @@
+{
+     "compilerOptions": {
+         "baseUrl": "./src",
+         "rootDir": "./src",
+     },
+     "include": [
+         "src/**/*"
+, "models"     ],
+     "exclude": [
+         "node_modules"
+     ]
+ }

@@ -12,12 +12,14 @@ SERVER.use(cors())
 
 mongoose.set('strictQuery', true)
 const connectDB = async () => {
+     console.log(process.env.MONGODB_USERNAME)
      await mongoose.connect(`mongodb+srv://${process.env.MONGODB_USERNAME}:${process.env.MONGODB_PASSWORD}@my-portfolio.fwhehmb.mongodb.net/?retryWrites=true&w=majority`,
           {
                useNewUrlParser: true,
                useUnifiedTopology: true,
           }
-     ).then(() => console.log('MongoDB connected.'))
+     )
+     .then(() => console.log('MongoDB connected.'))
      .catch(error => {
           console.log(error.message)
           process.exit(1)
